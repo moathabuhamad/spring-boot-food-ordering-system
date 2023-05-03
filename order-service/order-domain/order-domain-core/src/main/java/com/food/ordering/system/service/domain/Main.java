@@ -1,4 +1,4 @@
-package com.food.ordering.system;
+package com.food.ordering.system.service.domain;
 
 public class Main {
     public static void main(String[] args) {
