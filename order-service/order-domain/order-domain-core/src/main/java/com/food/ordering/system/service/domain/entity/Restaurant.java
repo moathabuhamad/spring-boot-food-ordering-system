@@ -1,4 +1,4 @@
-package com.food.ordering.system.entity;
+package com.food.ordering.system.service.domain.entity;
 
 import com.food.ordering.system.domain.entity.AggrigateRoot;
 import com.food.ordering.system.domain.valueobject.RestaurantId;

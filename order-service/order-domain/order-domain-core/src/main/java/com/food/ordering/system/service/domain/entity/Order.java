@@ -1,11 +1,11 @@
-package com.food.ordering.system.entity;
+package com.food.ordering.system.service.domain.entity;
 
 import com.food.ordering.system.domain.valueobject.*;
 import com.food.ordering.system.domain.entity.AggrigateRoot;
-import com.food.ordering.system.exception.OrderDomainExeption;
-import com.food.ordering.system.valueobject.OrderItemId;
-import com.food.ordering.system.valueobject.StreetAddress;
-import com.food.ordering.system.valueobject.TrackingId;
+import com.food.ordering.system.service.domain.exception.OrderDomainExeption;
+import com.food.ordering.system.service.domain.valueobject.OrderItemId;
+import com.food.ordering.system.service.domain.valueobject.StreetAddress;
+import com.food.ordering.system.service.domain.valueobject.TrackingId;
 
 import java.util.List;
 import java.util.UUID;
@@ -56,7 +56,7 @@ public class Order extends AggrigateRoot<OrderId> {
         }
 
         orderStatus = OrderStatus.CANCELLING;
-        updateFailureMessaeges(failureMessages);
+        updateFailureMessages(failureMessages);
     }
 
     public void cancel(List<String> failureMessages){
@@ -65,10 +65,10 @@ public class Order extends AggrigateRoot<OrderId> {
         }
 
         orderStatus = OrderStatus.CANCELED;
-        updateFailureMessaeges(failureMessages);
+        updateFailureMessages(failureMessages);
     }
 
-    private void updateFailureMessaeges(List<String> failureMessages) {
+    private void updateFailureMessages(List<String> failureMessages) {
         if (this.failureMessages != null && failureMessages != null) {
             this.failureMessages.addAll(failureMessages.stream().filter(message -> !message.isEmpty()).toList());
         }
