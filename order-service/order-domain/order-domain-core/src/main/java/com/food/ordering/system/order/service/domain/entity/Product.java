@@ -1,4 +1,4 @@
-package com.food.ordering.system.service.domain.entity;
+package com.food.ordering.system.order.service.domain.entity;
 
 import com.food.ordering.system.domain.entity.BasesEntity;
 import com.food.ordering.system.domain.valueobject.Money;
