@@ -28,7 +28,7 @@ public class Order extends AggrigateRoot<OrderId> {
         initializeOrderItems();
     }
 
-    public void  ValidateOrder(){
+    public void  validateOrder(){
         validateInitialOrder();
         validateTotalPrice();
         validateItemsPrice();
